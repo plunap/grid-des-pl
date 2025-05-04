@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-areas:
+    'header header header header'
+    'sidebar main main main'
+    'footer footer footer footer';
+    grid-template-rows: 90px 1fr 110px;  /*para dividir en filas el eje horizontal*/ 
+    min-height: 100vh;  /*es el alto mínimo de pantalla que tendrá la pág, según el dispositivo donde se esté viendo*/
+    grid-template-columns: 200px 1fr; 
+}
+
+.header{
+    grid-area: header;
+    background-color: #153f8b;
+    place-content: center;
+    text-align: center;
+    color: white;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: gainsboro;
+    color: black;
+}
+
+.sidebar-list{
+    text-align: left;
+}
+
+.sidebar-item{
+    list-style: none;
+    padding: 12px 20px 12px 30px;
+    background-color: gainsboro;
+    border-bottom: solid 1px rgb(185, 185, 185);
+    color: grey;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.sidebar-item:hover{
+    background-color: rgb(204, 202, 202);
+    color: black;
+}
+
+.sidebar h3{
+    padding: 12px 20px 12px 30px;
+    background-color: gainsboro;
+    border-bottom: solid 1px rgb(185, 185, 185);
+    color: #153f8b;
+    font-weight: 600;
+}
+
+
+/* CARD inicio*/
+
+.main{
+    grid-area: main;
+    background-color: gainsboro;
+    display: flex;
+    flex-wrap: wrap; /*Hizo que las CARD fueran responsive*/
+    justify-content: center;
+    padding: 10px;
+}
+
+.card {
+    display: flex;
+	flex-flow: column nowrap;
+	width: 300px;
+    height: 400px;
+	background-color: white;
+    margin: 10px;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.card-img img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.detalle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 5px;
+    color: black
+}
+
+.precio{
+    text-align: center;
+    margin-top: 7px;
+    color: grey
+}
+
+
+.card-btn {
+	justify-content: space-evenly;
+	align-items: center;
+    margin-top: 10px;
+}
+
+.btn{
+    background-color: #153f8b;
+    border: none;
+    width: 300px;
+    height: 32px;
+    justify-content: end;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #215bc9;
+}
+
+/* CARD fin*/
+
+
+.footer{
+    grid-area: footer;
+    background-color: #153f8b;
+    text-align: center;
+    color: #5e81c4;
+}
+
+.footer a{
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /*elimina la linea de los textos de lista*/
+}
+
+.footer-list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 30px;
+    font-size: 25px;
+    list-style: none; /*elimina los puntos de lista*/
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.footer-list i{
+    color: #3363bd;
+}
+
+.footer-list i:hover{
+    color: #88a0cc;
+}
+
+
